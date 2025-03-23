@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Partida</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Arial', sans-serif;
+        background-color: #f4f4f4;
+        color: #333;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+
+      form {
+        background-color: #fff;
+        padding: 20px;
+        width: 100%;
+        max-width: 400px;
+        border: 1px solid #ccc;
+        margin-bottom: 20px;
+      }
+
+      select,
+      input[type="date"] {
+        width: 100%;
+        padding: 8px;
+        margin: 10px 0;
+        border: 1px solid #ccc;
+      }
+
+      input[type="button"] {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      input[type="button"]:hover {
+        background-color: #0056b3;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+
+      th,
+      td {
+        padding: 10px;
+        border: 1px solid #ccc;
+        text-align: left;
+      }
+
+      th {
+        background-color: #007bff;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f9f9f9;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Cadastro de Partida</h2>
+    <form id="formPartida">
+      <p>
+        Time Mandante:
+        <select id="timeMandante">
+          <!-- Opções de times -->
+        </select>
+      </p>
+      <p>
+        Time Visitante:
+        <select id="timeVisitante">
+          <!-- Opções de times -->
+        </select>
+      </p>
+      <p>
+        Campeonato:
+        <select id="campeonato">
+          <!-- Opções de campeonatos -->
+        </select>
+      </p>
+      <p>
+        Data:
+        <input type="date" id="data" />
+      </p>
+      <input type="button" onclick="salvarPartida(event)" value="Cadastrar" />
+    </form>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Time Mandante</th>
+          <th>Time Visitante</th>
+          <th>Campeonato</th>
+          <th>Data</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="tbPartidas">
+        <!-- Dados das partidas -->
+      </tbody>
+    </table>
+
+    <script type="text/javascript" src="partida.js"></script>
+  </body>
+</html>
